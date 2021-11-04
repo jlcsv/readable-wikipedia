@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@media screen and (max-width: 700px) {
+
+   /* This moves the sidebar off-screen */
+   #mw-panel {
+      opacity: 0;
+      margin-left: -11em;
+   }
+
+   /* This moves other stuff into the leftover space */
+   #content, #head-base, #footer, #mw-head-base {
+      margin-left: -1px;
+   }
+
+   /* Nicer presentation for the left-hand tabs */
+   #left-navigation {
+      margin-left: 1em;
+   }
+}
+
+/* Makes infoboxes 30em */
+@media screen and (min-width: 1280px) {
+   .infobox, .sidebar {
+      width: 30em !important;
+   }
+}
+
+@media screen and (max-width: 850px) {
+   .infobox, .sidebar {
+      width: 100% !important;
+   }
+}
+
+/* Typography */
+html, body {
+   text-rendering: optimizeLegibility;
+   font-variant-numeric: diagonal-fractions;
+   font-variant-numeric: ordinal;
+}
+
+.mw-body-content {
+   font-size: 19px;
+   font-family: 'Crimson Pro', serif;
+   font-variant-numeric: oldstyle-nums;
+}
+
+table {
+   font-variant-numeric: lining-nums tabular-nums;
+}
+
+.firstHeading, .mw-headline {
+   font-variant-numeric: lining-nums;
+}
+
+.mw-body .firstHeading, .mw-headline, .mw-body-content sub, .mw-body-content sup, .reference {
+   font-family: 'Crimson Pro', serif;
+}
+
+#content {
+   max-width: 1175px !important;
+}
+
+h3, h4, h5, h6, b, h3 .mw-headline, h4 .mw-headline, h5 .mw-headline, h6 .mw-headline, .mw-editsection, .mw-body-content p b, b a, #mw-head, #mw-panel, #mw-head li, #mw-panel li, #mp-topbanner, .rt-tooltip {
+   font-family: 'Open Sans', sans-serif;
+   font-variant-numeric: lining-nums;
+}
+
+p b, dd b, li b, td b, code, span b, pre, #mp-topbanner {
+   font-size: 80%;
+}
+
+sup {
+   font-variant-position: super !important;
+   font-variant-numeric: lining-nums;
+}
+
+/* Line length (limits characters per line, doesn't count spaces) */
+.mw-body-content p, dl, li {
+   max-width: 48ch;
+   font-variant-numeric: oldstyle-nums;
+}
+
+dl dd {
+   width: 48ch;
+   font-variant-numeric: oldstyle-nums;
+}
+
+/* Hide [edit source], but reveal on hover */
+.mw-content-ltr .mw-editsection {
+   opacity: 0;
+}
+
+.mw-content-ltr .mw-editsection:hover {
+   opacity: 1;
+}
+
+/* Don't limit width on page history */
+#pagehistory li, p.ve-ce-branchNode.ve-ce-contentBranchNode.ve-ce-paragraphNode, .mw-contributions-list li {
+   max-width: 100%;
+}
+
+/* Moves left images to the right */
+div.tleft {
+   clear: right;
+   float: right;
+   margin: 0.5em 0 1.3em 1.4em;
+}
+
+/* Limits image width */
+*.center *, div.thumbinner, div.tleft, div.tnone, div.tright, html .thumbimage, img {
+   max-width: 100% !important;
+   height: auto
+}
+
+/* Don't shrink images in templates  */
+td.mbox-image img {
+   min-width: initial !important;
+}
+
+/* Fills out table on the Top 25 Report */
+#mw-content-text dl, #mw-content-text dl dd table {
+   width: 98%;
+   max-width: 98%;
+}
+
+/* Small-caps abbreviations */
+abbr {
+   font-variant-caps: all-small-caps;
+   /* enable */
+   text-decoration-line: none !important;
+   font-size: 1.25em;
+}
+
+/* Tweak packed galleries */
+ul.mw-gallery-packed, ul.mw-gallery-packed-overlay, ul.mw-gallery-packed-hover {
+   text-align: left;
+   position: relative;
+   width: 100%;
+   margin-left: 0;
+}
